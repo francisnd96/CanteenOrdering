@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Voucher">
+
+
+    <TextView
+        android:id="@+id/title"
+
+        android:layout_width="match_parent"
+        android:text="Vouchers"
+        android:textSize="30dp"
+        android:padding="10dp"
+        android:layout_height="wrap_content" />
+
+    <Button
+        android:id="@+id/add_voucher"
+        android:layout_width="144dp"
+        android:layout_height="45dp"
+        android:layout_alignBottom="@+id/title"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="7dp"
+        android:layout_marginEnd="7dp"
+        android:layout_marginBottom="9dp"
+        android:text="Add Voucher" />
+    <TextView
+        android:id="@+id/available"
+        android:layout_below="@id/title"
+        android:layout_width="match_parent"
+        android:text="Available vouchers"
+        android:textSize="15sp"
+        android:padding="10dp"
+        android:layout_height="wrap_content" />
+
+    <RelativeLayout
+        android:id="@+id/rel_lay"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/available">
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/cat_recycler"
+        android:layout_width="match_parent"
+        android:padding="10dp"
+        android:layout_height="match_parent"></android.support.v7.widget.RecyclerView>
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/used"
+        android:layout_below="@id/rel_lay"
+        android:layout_width="match_parent"
+        android:text="Used vouchers"
+        android:textSize="15sp"
+        android:padding="10dp"
+        android:layout_height="wrap_content" />
+
+    <android.support.v7.widget.RecyclerView
+        android:padding="10dp"
+        android:id="@+id/cat_recycler2"
+        android:layout_below="@id/used"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"></android.support.v7.widget.RecyclerView>
+</RelativeLayout>

@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="10dp"
+    tools:context=".Trolley">
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/orderList"
+        android:background="@android:color/transparent"
+        android:layout_above="@id/buttons"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"/>
+
+        <LinearLayout
+            android:id="@+id/buttons"
+            android:layout_above="@id/totalcard"
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:baselineAligned="false"
+            android:layout_height="wrap_content">
+
+        <Button
+            android:layout_above="@id/totalcard"
+            android:id="@+id/select_voucher"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:text="select voucher"
+            >
+
+        </Button>
+
+    <Button
+        android:layout_toRightOf="@id/select_voucher"
+        android:layout_above="@id/totalcard"
+        android:id="@+id/remove_voucher"
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_height="wrap_content"
+        android:text="remove voucher"
+        >
+
+    </Button>
+
+        </LinearLayout>
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/totalcard"
+        android:layout_alignParentBottom="true"
+        android:layout_width="match_parent"
+        android:layout_height="130dp"
+        app:cardBackgroundColor="@color/colorPrimary"
+        >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:id="@+id/top_line"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="8dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Total:  "
+                    android:textColor="#fff"
+                    android:textSize="22dp" />
+
+                <TextView
+                    android:id="@+id/totalCost"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="£5,000"
+                    android:textColor="#fff"
+                    android:textSize="22dp" />
+
+                <TextView
+                    android:id="@+id/voucher_notice"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="#fff"
+                    android:text="10% Voucher applied"
+                    android:layout_marginLeft="30dp"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_below="@id/top_line"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/saving_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="#fff"
+                    android:textSize="15dp" />
+
+                <TextView
+                    android:id="@+id/saving"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="#f00"
+                    android:textSize="15dp" />
+
+
+
+            </LinearLayout>
+
+            <android.support.v7.widget.AppCompatButton
+                android:id="@+id/submitOrder"
+                android:layout_width="240dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_marginBottom="10dp"
+                android:layout_marginLeft="9dp"
+                android:layout_marginRight="9dp"
+                android:text="Submit Order" />
+
+            <Button
+                android:id="@+id/clear_cart"
+                android:layout_width="70dp"
+                android:layout_height="wrap_content"
+                android:layout_alignBaseline="@+id/submitOrder"
+                android:layout_alignBottom="@+id/submitOrder"
+                android:layout_toEndOf="@+id/submitOrder"
+                android:layout_toRightOf="@+id/submitOrder"
+
+                android:text="Clear" />
+
+        </RelativeLayout>
+
+    </android.support.v7.widget.CardView>
+
+</RelativeLayout>

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:card_view="http://schemas.android.com/tools"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:layout_margin="7dp"
+    app:cardElevation="0dp"
+    card_view:cardUseCompatPadding="true">
+
+    <RelativeLayout
+        android:layout_height="match_parent"
+        android:layout_width="match_parent">
+
+
+        <TextView
+
+            android:id="@+id/past_order_detail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="detail"
+            android:textSize="16sp"
+            android:padding="19dp"/>
+
+        <Button
+            android:id="@+id/reorder"
+            android:layout_below="@id/past_order_detail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="40dp"
+            android:text="reorder"
+            android:background="@drawable/roundgreen"/>
+
+
+    </RelativeLayout>
+
+
+</android.support.v7.widget.CardView>

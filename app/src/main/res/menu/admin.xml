@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/navigation_pOrders"
+        android:icon="@drawable/trolley"
+        android:title="Pending Orders" />
+
+    <item
+        android:id="@+id/navigation_addRemove"
+        android:icon="@drawable/person"
+        android:title="Add/Remove item" />
+
+</menu>

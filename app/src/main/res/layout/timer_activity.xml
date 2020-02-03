@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".Timer">
+
+    <TextView
+        android:id="@+id/welcome_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="50dp"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="0dp"
+        android:text="Thank you, you order will be ready for collection between"
+        android:textSize="25sp" />
+
+
+    <LinearLayout
+        android:layout_below="@id/welcome_text"
+        android:orientation="horizontal"
+        android:id="@+id/times"
+        android:padding="50dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+    <TextView
+        android:id="@+id/high_time"
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_height="wrap_content"
+        android:text="10:00"
+        android:textSize="35sp" />
+
+        <TextView
+            android:id="@+id/dash"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="-"
+            android:padding="12dp"
+            android:textSize="45sp"/>
+
+        <TextView
+            android:id="@+id/low_time"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:text="10:00"
+            android:textSize="35sp" />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/time_of_completion"
+        android:layout_width="wrap_content"
+        android:layout_below="@id/times"
+        android:layout_height="wrap_content"
+        android:padding="40dp"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="0dp"
+        android:text=""
+        android:textSize="25sp" />
+
+    <TextView
+        android:id="@+id/text"
+        android:layout_below="@id/time_of_completion"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:text="Please rate or go back to menu"/>
+
+    <LinearLayout
+        android:layout_below="@id/text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="5dp">
+
+        <Button
+            android:id="@+id/rate"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="rate" />
+        <Button
+            android:id="@+id/back"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="back"/>
+    </LinearLayout>
+
+</RelativeLayout>
